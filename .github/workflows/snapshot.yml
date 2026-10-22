@@ -5,9 +5,6 @@ name: Snapshot - Build AmneziaWG for OpenWrt SNAPSHOT
 # republishes the result under the rolling `snapshot' pre-release.
 
 on:
-  schedule:
-    # Daily, a few hours after the OpenWrt SNAPSHOT builds usually finish.
-    - cron: "0 6 * * *"
   workflow_dispatch:
     inputs:
       amneziawg_version:
