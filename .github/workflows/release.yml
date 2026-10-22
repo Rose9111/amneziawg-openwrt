@@ -11,14 +11,6 @@ name: Release - Build AmneziaWG for the latest OpenWrt release
 # for a newly published OpenWrt release.
 
 on:
-  push:
-    tags:
-      - "v*"
-  schedule:
-    # Once a day check whether a newer stable OpenWrt release appeared and, if
-    # so, build the latest published YAAWG release for it and attach the
-    # archives to that release. Nothing happens when everything is up to date.
-    - cron: "0 5 * * *"
   workflow_dispatch:
     inputs:
       amneziawg_version:
